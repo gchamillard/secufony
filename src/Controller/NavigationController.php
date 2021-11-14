@@ -18,8 +18,8 @@ class NavigationController extends AbstractController
         if($session->has('message'))
         {
             $message = $session->get('message');
-            $session->remove('message'); //on vide la variable message dans la session
-            $return['message'] = $message; //on ajoute à l'array de paramètres notre message
+            $session->remove('message'); // On vide la variable message dans la session
+            $return['message'] = $message; // On ajoute à l'array de paramètres notre message
         }
         return $this->render('navigation/home.html.twig', $return);
     }
